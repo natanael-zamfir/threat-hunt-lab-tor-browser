@@ -4,7 +4,7 @@
 
 
 # Threat Hunt Report: Unauthorized TOR Usage
-- [Scenario Creation](https://github.com/)
+- [Scenario Creation](https://github.com/natanael-zamfir/threat-hunt-lab-tor-browser/blob/main/threat-hunting-scenario-tor-events.md)
 
 ## Platforms and Languages Leveraged
 - Windows 10 Virtual Machines (Microsoft Azure)
