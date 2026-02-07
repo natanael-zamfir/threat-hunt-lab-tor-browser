@@ -25,10 +25,18 @@ Management suspects that some employees may be using TOR browsers to bypass netw
 ## Steps Taken
 
 ### 1. Searched the `DeviceFileEvents` Table
-
-Searched for any file that had the string ‘tor’ in it and discovered what looks like the user labuser downloaded a TOR installer, did something that resulted in many TOR-related files being copied to the desktop, and the creation of a file called tor-shopping-list.txt on the desktop at `2026-01-30T01:25:35Z`. These events began at `2026-01-30T00:58:50Z`.
+Searched for any file that had the string ‘tor’ in it and discovered a few users using the Tor browser. For this threat hunt I will investigate the user "labuser" with device name "mar-the-test". The user downloaded a TOR installer, did something that resulted in many TOR-related files being added to the desktop, and the creation of a file called tor-shopping-list.txt (as expected from the scenario) on the desktop at `2026-01-30T01:25:35Z`. These events began at `2026-01-30T00:58:50Z`.
 
 **Query used to locate events:**
+```kql
+DeviceFileEvents
+| where FileName contains "tor"  
+| order by Timestamp desc  
+| project Timestamp, DeviceName, ActionType, FileName, FolderPath, SHA256
+```
+<img width="1655" height="390" alt="image" src="https://github.com/user-attachments/assets/50ef10ba-be66-4c2b-9dff-4faa78bd084b" />
+
+Once a user was identified, I narrowed the search by Device Name and timestamp from when the first event was initiated.
 
 ```kql
 DeviceFileEvents  
