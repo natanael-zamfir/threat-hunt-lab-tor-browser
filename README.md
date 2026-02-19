@@ -1,8 +1,8 @@
-# Threat Hunt Report: Unauthorized TOR Usage
+# 🚨Threat Hunting Scenario: Unauthorised Tor Browser Usage Detection 🧅
 
 <img width="364" src="https://github.com/user-attachments/assets/c15fb66b-190a-441d-a61e-7c370ce7311a" />
 
-- [Scenario Creation](https://github.com/natanael-zamfir/threat-hunt-lab-tor-browser/blob/main/threat-hunting-scenario-tor-events.md)
+- [Threat Hunt Scenario - Event Creation](https://github.com/natanael-zamfir/threat-hunt-lab-tor-browser/blob/main/threat-hunting-scenario-tor-events.md)
 
 ## Platforms and Languages Leveraged
 - Windows 10 Virtual Machines (Microsoft Azure)
